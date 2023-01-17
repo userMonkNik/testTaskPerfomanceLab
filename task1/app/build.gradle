@@ -1,0 +1,21 @@
+plugins {
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+}
+
+application {
+    mainClass = 'task1.Task1'
+}
+
+jar {
+    manifest {
+        attributes "Main-Class": "task1.Task1"
+    }
+    archiveBaseName = 'task1'
+}
