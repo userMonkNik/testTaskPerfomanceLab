@@ -7,18 +7,18 @@ import java.io.IOException;
 public class Task2 {
     public static void main(String[] args) {
 
-        try (BufferedReader buf1 = new BufferedReader(new FileReader(args[0]));
-             BufferedReader buf2 = new BufferedReader(new FileReader(args[1]))) {
+        try (BufferedReader readerCircleParam = new BufferedReader(new FileReader(args[0]));
+             BufferedReader readerDotsParam = new BufferedReader(new FileReader(args[1]))) {
 
-            String[] center = buf1.readLine().split("\\s+");
+            String[] center = readerCircleParam.readLine().split("\\s+");
 
             double xCenter = Double.parseDouble(center[0]);
             double yCenter = Double.parseDouble(center[1]);
-            double radius = Double.parseDouble(buf1.readLine());
+            double radius = Double.parseDouble(readerCircleParam.readLine());
 
             String dots;
 
-            while ((dots = buf2.readLine()) != null) {
+            while ((dots = readerDotsParam.readLine()) != null) {
 
                 String[] dotsArr = dots.split("\\s+");
 
